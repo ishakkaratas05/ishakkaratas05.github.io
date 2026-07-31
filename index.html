@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İshak Karataş | Yazılım Mühendisliği Öğrencisi</title>
+    <meta name="description"
+        content="İshak Karataş - Fırat Üniversitesi Yazılım Mühendisliği Öğrencisi ve FUTURE Topluluğu Başkan Yardımcısı Kişisel Portföy Web Sitesi.">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Bilimsel Kareli Arka Plan & Süzülen Düğümler Ağ Katmanı -->
+    <div class="math-grid-bg"></div>
+    <canvas id="bg-scientific-canvas" class="bg-scientific-canvas"></canvas>
+
+    <!-- Süzülen Teknoloji İkonları (HTML, React, C#, GitHub, MongoDB, Python, JS, CSS) -->
+    <div class="floating-tech-icons">
+        <div class="tech-icon t-icon-1" title="HTML5"><i class="fa-brands fa-html5"></i></div>
+        <div class="tech-icon t-icon-2" title="React"><i class="fa-brands fa-react"></i></div>
+        <div class="tech-icon t-icon-3" title="Python"><i class="fa-brands fa-python"></i></div>
+        <div class="tech-icon t-icon-4" title="GitHub"><i class="fa-brands fa-github"></i></div>
+        <div class="tech-icon t-icon-5" title="C#"><span class="tech-badge-csharp">C#</span></div>
+        <div class="tech-icon t-icon-6" title="MongoDB / Database"><i class="fa-solid fa-database"></i></div>
+        <div class="tech-icon t-icon-7" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+        <div class="tech-icon t-icon-8" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
+    </div>
+
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- HEADER / NAVIGATION (PREMIUM TYPOGRAPHY BRANDING) -->
+    <header class="navbar-header" id="navbar">
+        <div class="container nav-container">
+            <!-- Sol: Tipografik İSHAK KARATAŞ. Logo -->
+            <a href="#hero" class="nav-brand" id="nav-logo">
+                <span class="brand-first">İSHAK</span>
+                <span class="brand-last">KARATAŞ</span>
+            </a>
+
+            <!-- Orta: Hizalı Navigasyon Menüsü -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">Hakkımda</a></li>
+                    <li><a href="#education" class="nav-link">Eğitim</a></li>
+                    <li><a href="#experience" class="nav-link">Deneyim</a></li>
+                    <li><a href="#community" class="nav-link">FUTURE Topluluğu</a></li>
+                    <li><a href="#projects" class="nav-link">Projelerim</a></li>
+                    <li><a href="#certificates" class="nav-link">Sertifikalar</a></li>
+                    <li><a href="#contact" class="nav-link">İletişim</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog <span class="badge-soon">Yakında</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- Sağ: Tema Butonu & Mobil Menü -->
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Karanlık/Aydınlık Tema Değiştir">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </button>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO / KARŞILAMA BÖLÜMÜ -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+
+                    <h1 class="hero-title">
+                        Merhaba, Ben <span class="gradient-text">İshak Karataş</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Fırat Üniversitesi'nde Yazılım Mühendisliği öğrencisiyim. Web teknolojilerine, kullanıcı dostu
+                        tasarımlara ve yazılım dünyasına büyük bir merak duyuyorum. Problem çözmeyi, tasarlamayı ve
+                        güçlü bir ekip ruhuyla çalışmayı çok seviyorum!
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-rocket"></i> Projelerimi İncele
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-paper-plane"></i> İletişime Geç
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span class="social-label">Takip Et:</span>
+                        <a href="https://www.linkedin.com/in/ishak-karata%C5%9F-7420802b3/" target="_blank"
+                            rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ishakkaratas05" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kodkasifi_404/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" title="Instagram (@kodkasifi_404)">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="profile-card-column"
+                        style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+                        <!-- Kurumsal ve Şık Profil Çerçevesi -->
+                        <div class="profile-pic-container">
+                            <div class="profile-pic-inner">
+                                <!-- Profil Fotoğrafı -->
+                                <img src="assets/images/profile.png" alt="İshak Karataş Profil Fotoğrafı"
+                                    draggable="false" oncontextmenu="return false;">
+                                <!-- Görünmez Güvenlik Katmanı (Kopyalamayı zorlaştırmak için) -->
+                                <div style="position: absolute; inset: 0; z-index: 5; background: transparent;"
+                                    oncontextmenu="return false;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down-indicator" aria-label="Aşağı Kaydır">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- 2. HAKKIMDA BÖLÜMÜ -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Kendi Yolculuğum</span>
+                    <h2 class="section-title">Hakkımda</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="notebook-container">
+                        <!-- Lined Paper Sheet -->
+                        <div class="notebook-paper">
+                            <!-- Notebook Header Row -->
+                            <div class="notebook-header-row">
+                                <span class="notebook-subject"><i class="fa-solid fa-graduation-cap"></i> Yolculuk.log</span>
+                                <div class="notebook-date-box">
+                                    <span>NO:</span>
+                                    <span style="color: var(--accent-primary);">01</span>
+                                </div>
+                            </div>
+
+                            
+                            <p>
+                                Fırat Üniversitesi'nde Yazılım Mühendisliği öğrencisiyim. Yapay zekayı günlük hayatı
+                                kolaylaştırmak için oldukça fazla kullansam da bu metni kendim yazdım :) Başta web
+                                teknolojileri olmak üzere yazılım dünyasına büyük bir merak duyuyorum. Şu an hala bir
+                                öğrenci olarak kendimi elimden geldiğince geliştirmeye, yeni teknolojiler öğrenmeye ve
+                                İngilizcemi geliştirmeye çalışıyorum. Tasarım yapmaya bayılıyorum. Canva benim favori
+                                uygulamam. Figma ile de küçük deneme atışları yaptım; çünkü göze hitap eden, kullanıcı dostu
+                                sistem tasarımları oluşturmaktan çok keyif alıyorum.
+                            </p>
+                            
+                            <p>
+                                Problem çözmeyi ve araştırma yapmayı seviyorum. Ancak bu süreci tek başıma ilerletmektense
+                                iletişim yeteneği güçlü insanlarla birlikte, bir ekip ruhuyla yürütmek benim için her zaman
+                                çok daha iyi! Bu doğrultuda, arkadaşlarımla kurduğumuz girişimcilik topluluğunda başkan
+                                yardımcılığı görevime de aktif olarak devam ediyorum.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- Sağ Kısım: Karakter Animasyonu -->
+                    <div class="character-card-wrapper">
+                        <div class="character-pic-container">
+                            <div class="character-pic-inner">
+                                <div class="character-frame-wrapper">
+                                    <img src="assets/images/character/ch_1.png" alt="Karakter Kare 1" class="char-frame frame-1" draggable="false" oncontextmenu="return false;">
+                                    <img src="assets/images/character/ch_2.png" alt="Karakter Kare 2" class="char-frame frame-2" draggable="false" oncontextmenu="return false;">
+                                    <img src="assets/images/character/ch_3.png" alt="Karakter Kare 3" class="char-frame frame-3" draggable="false" oncontextmenu="return false;">
+                                    <img src="assets/images/character/ch_4.png" alt="Karakter Kare 4" class="char-frame frame-4" draggable="false" oncontextmenu="return false;">
+                                </div>
+                                <!-- Görünmez Güvenlik Katmanı -->
+                                <div style="position: absolute; inset: 0; z-index: 5; background: transparent;" oncontextmenu="return false;"></div>
+                            </div>
+                            <div class="character-platform"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EĞİTİM BÖLÜMÜ (LINKEDIN STYLE EĞİTİM MODÜLÜ) -->
+        <section class="section education-section" id="education">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Akademik Geçmiş</span>
+                    <h2 class="section-title">Eğitim</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="timeline vertical-timeline">
+                    <!-- Lisans Eğitimi -->
+                    <div class="timeline-item">
+                        <a href="https://www.firat.edu.tr/tr" target="_blank" rel="noopener noreferrer"
+                            class="timeline-dot" title="Fırat Üniversitesi">
+                            <img src="assets/logos/education/university.png" alt="Fırat Üniversitesi Amblemi"
+                                class="timeline-dot-img">
+                        </a>
+                        <div class="timeline-content glass-card linkedin-edu-card">
+                            <div class="edu-card-top">
+                                <div class="edu-institution-meta">
+                                    <h3 class="edu-school-name">Fırat Üniversitesi</h3>
+                                    <h4 class="edu-field-name">Yazılım Mühendisliği</h4>
+                                </div>
+                                <span class="degree-badge bachelor">Lisans</span>
+                            </div>
+                            <div class="edu-date-row">
+                                <span class="edu-date-text"><i class="fa-regular fa-calendar"></i> 2023 - 2027</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Veri yapıları, Nesne Yönelimli Programlama (OOP), Algoritma Analizi, Veritabanı Yönetim
+                                Sistemleri ve Modern Web Teknolojileri üzerine lisans eğitimi.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Fırat Üniversitesi</span>
+                                <span class="tag">Yazılım Mühendisliği</span>
+                                <span class="tag">Veri Yapıları & Algoritmalar</span>
+                                <span class="tag">OOP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DENEYİM BÖLÜMÜ -->
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Kariyer & Staj Geçmişi</span>
+                    <h2 class="section-title">Deneyim</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="timeline vertical-timeline">
+                    <!-- 0. İnönü Üniversitesi - Stajyer Yazılım Mühendisi -->
+                    <div class="timeline-item">
+                        <a href="https://www.linkedin.com/school/inukurumsal/posts/?feedView=all" target="_blank"
+                            rel="noopener noreferrer" class="timeline-dot" title="İnönü Üniversitesi">
+                            <img src="assets/logos/experience/inönü_logo.png" alt="İnönü Üniversitesi Logosu"
+                                class="timeline-dot-img">
+                        </a>
+                        <div class="timeline-content glass-card linkedin-edu-card">
+                            <div class="edu-card-top">
+                                <div class="edu-institution-meta">
+                                    <h3 class="edu-school-name">Stajyer Yazılım Mühendisi</h3>
+                                    <h4 class="edu-field-name">
+                                        İnönü Üniversitesi Bilgi İşlem Daire Başkanlığı · Stajyer
+                                        <a href="https://www.linkedin.com/school/inukurumsal/posts/?feedView=all"
+                                            target="_blank" rel="noopener noreferrer" class="company-linkedin-link"
+                                            title="İnönü Üniversitesi LinkedIn Sayfası">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="edu-date-row">
+                                <span class="edu-date-text"><i class="fa-regular fa-calendar"></i> 3 Ağu 2026 - 28 Ağu
+                                    2026 · 1 ay</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Cumhurbaşkanlığı İnsan Kaynakları Ofisi (CBİKO) <strong>Ulusal Staj Programı</strong>
+                                kapsamında, İnönü Üniversitesi Bilgi İşlem Daire Başkanlığı bünyesinde
+                                gerçekleştirilecek staj çalışması.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Ulusal Staj Programı</span>
+                                <span class="tag">İnönü Üniversitesi</span>
+                                <span class="tag">Yazılım Stajı</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1. Microsoft - Yapay Zeka Stajyeri -->
+                    <div class="timeline-item">
+                        <a href="https://www.linkedin.com/company/microsoft/posts/?feedView=all" target="_blank"
+                            rel="noopener noreferrer" class="timeline-dot" title="Microsoft">
+                            <img src="assets/logos/experience/microsoft_logo.png" alt="Microsoft Logosu"
+                                class="timeline-dot-img">
+                        </a>
+                        <div class="timeline-content glass-card linkedin-edu-card">
+                            <div class="edu-card-top">
+                                <div class="edu-institution-meta">
+                                    <h3 class="edu-school-name">Yapay Zeka Stajyeri</h3>
+                                    <h4 class="edu-field-name">
+                                        Microsoft · Stajyer
+                                        <a href="https://www.linkedin.com/company/microsoft/posts/?feedView=all"
+                                            target="_blank" rel="noopener noreferrer" class="company-linkedin-link"
+                                            title="Microsoft LinkedIn Sayfası">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="edu-date-row">
+                                <span class="edu-date-text"><i class="fa-regular fa-calendar"></i> Haz 2026 - Tem 2026 ·
+                                    2 ay</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Microsoft AI Innovators Summer Internship programı kapsamında yapay zeka teknolojileri
+                                üzerine geliştirme çalışmaları.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Microsoft AI</span>
+                                <span class="tag">Artificial Intelligence</span>
+                                <span class="tag">Summer Internship</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Artinlife - Stajyer Yazılım Mühendisi -->
+                    <div class="timeline-item">
+                        <a href="https://www.linkedin.com/company/artinlifetech/posts/?feedView=" target="_blank"
+                            rel="noopener noreferrer" class="timeline-dot" title="Artinlife Ar-Ge Yazılım">
+                            <img src="assets/logos/experience/artinlife_logo.png" alt="Artinlife Logosu"
+                                class="timeline-dot-img">
+                        </a>
+                        <div class="timeline-content glass-card linkedin-edu-card">
+                            <div class="edu-card-top">
+                                <div class="edu-institution-meta">
+                                    <h3 class="edu-school-name">Stajyer Yazılım Mühendisi</h3>
+                                    <h4 class="edu-field-name">
+                                        Artinlife Ar-Ge Yazılım Danışmanlık Siber Güvenlik · Stajyer
+                                        <a href="https://www.linkedin.com/company/artinlifetech/posts/?feedView="
+                                            target="_blank" rel="noopener noreferrer" class="company-linkedin-link"
+                                            title="Artinlife LinkedIn Sayfası">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="edu-date-row">
+                                <span class="edu-date-text"><i class="fa-regular fa-calendar"></i> Eyl 2025 - Şub 2026 ·
+                                    6 ay</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Elektrikli araç şarj istasyonlarının güvenlik analizi için; OCPP protokolü, SteVe
+                                yazılımı ve Python betikleri kullanılarak Google Cloud tabanlı sanal bir laboratuvar
+                                kurulması. </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Bilgi Güvenliği</span>
+                                <span class="tag">Elektrikli Araç Şarj İstasyonları</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Narveri - Stajyer Yazılım Mühendisi -->
+                    <div class="timeline-item">
+                        <a href="https://www.linkedin.com/company/narveri%CC%87/" target="_blank"
+                            rel="noopener noreferrer" class="timeline-dot" title="Narveri Eğitim Bilişim">
+                            <img src="assets/logos/experience/narveri_logo.png" alt="Narveri Logosu"
+                                class="timeline-dot-img">
+                        </a>
+                        <div class="timeline-content glass-card linkedin-edu-card">
+                            <div class="edu-card-top">
+                                <div class="edu-institution-meta">
+                                    <h3 class="edu-school-name">Stajyer Yazılım Mühendisi</h3>
+                                    <h4 class="edu-field-name">
+                                        Narveri Eğitim Bilişim · Stajyer
+                                        <a href="https://www.linkedin.com/company/narveri%CC%87/" target="_blank"
+                                            rel="noopener noreferrer" class="company-linkedin-link"
+                                            title="Narveri LinkedIn Sayfası">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="edu-date-row">
+                                <span class="edu-date-text"><i class="fa-regular fa-calendar"></i> Tem 2025 - Ağu 2025 ·
+                                    2 ay</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Web Scraping yöntemleriyle toplanan verilerin Python ve PySpark kullanılarak işlendiği
+                                ve MongoDB'ye aktarıldığı veri toplama ve işleme mimarisinin kurulması.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Web Scraping</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">PySpark</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Yapay Zeka ve Teknoloji Akademisi - Bursiyer -->
+                    <div class="timeline-item">
+                        <a href="https://www.linkedin.com/company/yapayzeka-ve-teknoloji-akademisi/" target="_blank"
+                            rel="noopener noreferrer" class="timeline-dot" title="Yapay Zeka ve Teknoloji Akademisi">
+                            <img src="assets/logos/experience/yzta_logo.png" alt="Yapay Zeka Akademisi Logosu"
+                                class="timeline-dot-img">
+                        </a>
+                        <div class="timeline-content glass-card linkedin-edu-card">
+                            <div class="edu-card-top">
+                                <div class="edu-institution-meta">
+                                    <h3 class="edu-school-name">Bursiyer</h3>
+                                    <h4 class="edu-field-name">
+                                        Yapay Zeka ve Teknoloji Akademisi · Stajyer
+                                        <a href="https://www.linkedin.com/company/yapayzeka-ve-teknoloji-akademisi/posts/?fee"
+                                            target="_blank" rel="noopener noreferrer" class="company-linkedin-link"
+                                            title="Yapay Zeka Akademisi LinkedIn Sayfası">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="edu-date-row">
+                                <span class="edu-date-text"><i class="fa-regular fa-calendar"></i> Kas 2024 - Ağu 2025 ·
+                                    10 ay</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Yapay zeka, girişimcilik ve FastAPI gibi konularda online eğitimlerin olduğu bir süreçti. Ancak benim en çok verim aldığım kısım; rastgele ekiplere ayrıldığımız Ideathon, Hackathon ve Bootcamp süreçleri oldu. Bu sayede birçok yeni insan tanıdım ve kısa sürede kusursuz olmasa da ortaya projeler çıkardık.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Yapay Zeka</span>
+                                <span class="tag">Bursiyer</span>
+                                <span class="tag">Ideathon</span>
+                                <span class="tag">Bootcamp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TOPLULUK VE LİDERLİK (CANVA TASARIMLI GERÇEKÇİ ASILI YAKA KARTI) -->
+        <section class="section community-highlight-section" id="community">
+            <div class="container">
+                <div class="community-banner-card">
+                    <div class="community-badge-tag-wrap">
+                        <span class="community-badge-tag">
+                            <i class="fa-solid fa-star"></i> Liderlik & Topluluk Deneyimi
+                        </span>
+                    </div>
+
+                    <div class="community-grid">
+                        <div class="community-info">
+                            <h2 class="community-title">
+                                <span class="community-logo-title-wrap">
+                                    <img src="assets/logos/experience/future_logo.png" alt="FUTURE Topluluğu Logosu"
+                                        class="community-inline-logo">
+                                    <span class="highlight-word">FUTURE Topluluğu</span>
+                                </span>
+                                <span class="community-role">Kurucu Üye & Başkan Yardımcısı</span>
+                            </h2>
+                            <p
+                                style="font-size: 0.85rem; color: var(--text-muted); font-style: italic; margin-top: -0.25rem; margin-bottom: 1.25rem;">
+                                FUTURE (Fırat University Technology Unity Reform & Entrepreneurship)
+                            </p>
+
+                            <p class="community-description">
+                                28 Mayıs 2025'teki resmi kuruluşumuzdan bu yana FUTURE Topluluğu'nun aktif bir üyesiyim.
+                                Bugüne kadar topluluk bünyesinde Başkan Yardımcılığı, Yönetim Kurulu Üyeliği ve Sosyal
+                                Medya & Tasarım Komite Başkanlığı görevlerini üstlendim. Canva üzerinden tasarımlar
+                                üretmeyi seviyorum; topluluğumuzun logosu da dahil olmak üzere birçok görsel çalışmaya
+                                imza attım. Düzenlediğimiz etkinliklerin sadece fikir ve planlama aşamasında değil,
+                                tasarımsal bütünlüğünün sağlanmasına kadar tüm süreçlerinde aktif rol alıyorum.
+                            </p>
+                            <ul
+                                style="list-style: none; padding: 0; margin: 1.25rem 0 0 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+                                <li style="display: flex; align-items: baseline; gap: 0.6rem;">
+                                    <i class="fa-solid fa-circle"
+                                        style="font-size: 0.35rem; color: var(--accent-primary); flex-shrink: 0; position: relative; top: -2px;"></i>
+                                    <span><strong style="color: var(--text-primary); font-weight: 600;">Başkan
+                                            Yardımcısı</strong></span>
+                                </li>
+                                <li style="display: flex; align-items: baseline; gap: 0.6rem;">
+                                    <i class="fa-solid fa-circle"
+                                        style="font-size: 0.35rem; color: var(--accent-primary); flex-shrink: 0; position: relative; top: -2px;"></i>
+                                    <span><strong style="color: var(--text-primary); font-weight: 600;">Yönetim Kurulu
+                                            Üyesi</strong></span>
+                                </li>
+                                <li style="display: flex; align-items: baseline; gap: 0.6rem;">
+                                    <i class="fa-solid fa-circle"
+                                        style="font-size: 0.35rem; color: var(--accent-primary); flex-shrink: 0; position: relative; top: -2px;"></i>
+                                    <span><strong style="color: var(--text-primary); font-weight: 600;">Sosyal Medya &
+                                            Tasarım Komite Başkanı</strong></span>
+                                </li>
+                            </ul>
+
+                            <div class="community-social-links"
+                                style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+                                <span style="font-weight: 600; color: var(--text-secondary); font-size: 0.95rem;">FUTURE
+                                    Topluluğu sosyal medya hesapları :</span>
+                                <a href="https://www.linkedin.com/company/future-firat/" target="_blank"
+                                    rel="noopener noreferrer" class="social-icon"
+                                    title="FUTURE Topluluğu LinkedIn Sayfası"
+                                    style="width: 32px; height: 32px; font-size: 0.9rem;">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/future_firat/" target="_blank"
+                                    rel="noopener noreferrer" class="social-icon"
+                                    title="FUTURE Topluluğu Instagram Sayfası"
+                                    style="width: 32px; height: 32px; font-size: 0.9rem;">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+
+                            <div class="community-action-wrap" style="margin-top: 1.75rem;">
+                                <a href="future.html" class="btn btn-primary"
+                                    style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.7rem 1.5rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.9rem; text-decoration: none; box-shadow: var(--shadow-sm);">
+                                    <i class="fa-solid fa-graduation-cap"></i> Çalışmalarımı İncele <i
+                                        class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- MATTER.JS PHYSICS BADGE -->
+                        <div class="badge-physics-area" id="badge-physics-area">
+                            <canvas id="badge-physics-canvas"></canvas>
+                            <div class="badge-card-dom" id="badge-card-dom">
+                                <img src="assets/images/yaka_karti.png"
+                                    alt="İshak Karataş FUTURE Topluluğu Görevli Yaka Kartı" class="badge-canva-img"
+                                    draggable="false" oncontextmenu="return false;"
+                                    style="pointer-events: none; -webkit-user-drag: none; user-select: none;">
+                                <div class="badge-glass-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PROJELERİM BÖLÜMÜ -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Ürettiğim Çalışmalar</span>
+                    <h2 class="section-title">Projelerim</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Proje 0: Kişisel Portföy Web Sitesi -->
+                    <div class="project-card glass-card"
+                        onclick="window.location.href='project-detail.html?id=portfoy-sitem'" style="cursor: pointer;">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span class="w-dot dot-red"></span>
+                                <span class="w-dot dot-yellow"></span>
+                                <span class="w-dot dot-green"></span>
+                            </div>
+                            <div class="window-address-bar">
+                                <i class="fa-solid fa-globe" style="font-size: 0.6rem;"></i> Kişisel Portföy Web Sitesi
+                            </div>
+                        </div>
+                        <div class="project-image-preview">
+                            <div class="project-ambient-bg"
+                                style="background-image: url('assets/projects/portfoy_ss/portfoy_ss_1.png');"></div>
+                            <img src="assets/projects/portfoy_ss/portfoy_ss_1.png"
+                                alt="Kişisel Portföy Web Sitesi Önizleme">
+                            <span class="project-category"><i class="fa-solid fa-user"></i> Bireysel Proje</span>
+                        </div>
+                        <div class="project-content">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 0.5rem; flex-wrap: wrap;">
+                                <h3 class="project-title" style="margin-bottom: 0;">Kişisel Portföy Web Sitesi</h3>
+                                <span
+                                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Temmuz
+                                    2026</span>
+                            </div>
+                            <p class="project-desc">
+                                HTML, CSS ve JavaScript kullanılarak geliştirilen; Matter.js 2D fizik motoru, özelleştirilmiş HTML5 Canvas düğüm animasyonları ve CSS Custom Properties ile zenginleştirilmiş, karanlık/aydınlık tema destekli interaktif portföy platformu.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Matter.js</span>
+                                <span>Canvas API</span>
+                            </div>
+                            <div class="project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="project-detail.html?id=portfoy-sitem" class="btn btn-sm btn-primary"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    Detayları İncele
+                                </a>
+                                <a href="https://github.com/ishakkaratas05" target="_blank" rel="noopener noreferrer"
+                                    onclick="event.stopPropagation();" class="btn btn-sm btn-outline"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 1: KampüsRadar -->
+                    <div class="project-card glass-card"
+                        onclick="window.location.href='project-detail.html?id=kampusradar'" style="cursor: pointer;">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span class="w-dot dot-red"></span>
+                                <span class="w-dot dot-yellow"></span>
+                                <span class="w-dot dot-green"></span>
+                            </div>
+                            <div class="window-address-bar">
+                                <i class="fa-solid fa-lock" style="font-size: 0.6rem;"></i> KampüsRadar
+                            </div>
+                        </div>
+                        <div class="project-image-preview">
+                            <div class="project-ambient-bg"
+                                style="background-image: url('assets/projects/kampusradar_ss/radar_ss_1.png');"></div>
+                            <img src="assets/projects/kampusradar_ss/radar_ss_1.png" alt="KampüsRadar Önizleme">
+                            <span class="project-category"><i class="fa-solid fa-user"></i> Bireysel Proje</span>
+                        </div>
+                        <div class="project-content">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 0.5rem; flex-wrap: wrap;">
+                                <h3 class="project-title" style="margin-bottom: 0;">KampüsRadar</h3>
+                                <span
+                                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Mayıs
+                                    - Haziran 2026</span>
+                            </div>
+                            <p class="project-desc">
+                                Üniversite kampüsü içerisindeki etkinlikleri, duyuruları ve konum tabanlı paylaşımları harita üzerinden takip etmeyi sağlayan mobil ve web platformu.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>React</span>
+                                <span>React Native</span>
+                                <span>Supabase</span>
+                                <span>Google Maps API</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="project-detail.html?id=kampusradar" class="btn btn-sm btn-primary"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    Detayları İncele
+                                </a>
+                                <a href="https://github.com/ishakkaratas05/kampusradar" target="_blank"
+                                    rel="noopener noreferrer" onclick="event.stopPropagation();"
+                                    class="btn btn-sm btn-outline" style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=NWP7Ew73N-Q" target="_blank"
+                                    rel="noopener noreferrer" onclick="event.stopPropagation();"
+                                    class="btn btn-sm btn-outline"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem; color: #ef4444; border-color: rgba(239, 68, 68, 0.25);">
+                                    <i class="fa-brands fa-youtube" style="color: #ef4444;"></i> Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 2: Jobverse -->
+                    <div class="project-card glass-card"
+                        onclick="window.location.href='project-detail.html?id=jobverse'" style="cursor: pointer;">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span class="w-dot dot-red"></span>
+                                <span class="w-dot dot-yellow"></span>
+                                <span class="w-dot dot-green"></span>
+                            </div>
+                            <div class="window-address-bar">
+                                <i class="fa-solid fa-lock" style="font-size: 0.6rem;"></i> JOBVERSE
+                            </div>
+                        </div>
+                        <div class="project-image-preview">
+                            <div class="project-ambient-bg"
+                                style="background-image: url('assets/projects/jobverse_ss/jobverse_ss_1.png');"></div>
+                            <img src="assets/projects/jobverse_ss/jobverse_ss_1.png" alt="Jobverse Önizleme">
+                            <span class="project-category"><i class="fa-solid fa-users"></i> Takım Projesi</span>
+                        </div>
+                        <div class="project-content">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 0.5rem; flex-wrap: wrap;">
+                                <h3 class="project-title" style="margin-bottom: 0;">JOBVERSE</h3>
+                                <span
+                                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Ekim
+                                    - Aralık 2025</span>
+                            </div>
+                            <p class="project-desc">
+                                Farklı sitelere dağılmış iş ilanlarını tek bir merkezde toplayan; adaylara sadece iş arama kolaylığı değil, aynı zamanda maaş dağılımları ve popüler yetenekler gibi sektör trendlerini analiz etme imkanı sunan akıllı bir kariyer platformu.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Python</span>
+                                <span>MongoDB</span>
+                                <span>Adzuna API</span>
+                                <span>JSearch API</span>
+                                <span>Canva</span>
+                                <span>Gemini</span>
+                            </div>
+                            <div class="project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="project-detail.html?id=jobverse" class="btn btn-sm btn-primary"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    Detayları İncele
+                                </a>
+                                <a href="https://github.com/ishakkaratas05/Jobverse" target="_blank"
+                                    rel="noopener noreferrer" onclick="event.stopPropagation();"
+                                    class="btn btn-sm btn-outline" style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 3: Makale Öneri Sistemi -->
+                    <div class="project-card glass-card"
+                        onclick="window.location.href='project-detail.html?id=makale-oneri'" style="cursor: pointer;">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span class="w-dot dot-red"></span>
+                                <span class="w-dot dot-yellow"></span>
+                                <span class="w-dot dot-green"></span>
+                            </div>
+                            <div class="window-address-bar">
+                                <i class="fa-solid fa-lock" style="font-size: 0.6rem;"></i> Makale Öneri Sistemi
+                            </div>
+                        </div>
+                        <div class="project-image-preview">
+                            <div class="project-ambient-bg"
+                                style="background-image: url('assets/projects/makale_öneri_ss/makale_ss_5.png');"></div>
+                            <img src="assets/projects/makale_öneri_ss/makale_ss_5.png"
+                                alt="Makale Öneri Sistemi Önizleme">
+                            <span class="project-category"><i class="fa-solid fa-user"></i> Bireysel Proje</span>
+                        </div>
+                        <div class="project-content">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 0.5rem; flex-wrap: wrap;">
+                                <h3 class="project-title" style="margin-bottom: 0;">Makale Öneri Sistemi</h3>
+                                <span
+                                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Ağustos
+                                    - Eylül 2025</span>
+                            </div>
+                            <p class="project-desc">
+                                arXiv veritabanı kullanarak filtreleme ve analiz yapan öneri motoru. PySpark ile büyük
+                                veri kümelerini işler ve kullanıcıya özel tavsiyeler sunar.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>Python</span>
+                                <span>PySpark</span>
+                                <span>MongoDB</span>
+                                <span>arXiv API</span>
+                            </div>
+                            <div class="project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="project-detail.html?id=makale-oneri" class="btn btn-sm btn-primary"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    Detayları İncele
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 4: Vitacheck -->
+                    <div class="project-card glass-card"
+                        onclick="window.location.href='project-detail.html?id=vitacheck'" style="cursor: pointer;">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span class="w-dot dot-red"></span>
+                                <span class="w-dot dot-yellow"></span>
+                                <span class="w-dot dot-green"></span>
+                            </div>
+                            <div class="window-address-bar">
+                                <i class="fa-solid fa-lock" style="font-size: 0.6rem;"></i> VITACHECK
+                            </div>
+                        </div>
+                        <div class="project-image-preview">
+                            <div class="project-ambient-bg"
+                                style="background-image: url('assets/projects/vitacheck_ss/vitacheck_1.png');"></div>
+                            <img src="assets/projects/vitacheck_ss/vitacheck_1.png" alt="Vitacheck Önizleme">
+                            <span class="project-category"><i class="fa-solid fa-users"></i> Takım Projesi</span>
+                        </div>
+                        <div class="project-content">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 0.5rem; flex-wrap: wrap;">
+                                <h3 class="project-title" style="margin-bottom: 0;">VITACHECK</h3>
+                                <span
+                                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Ağustos
+                                    2025</span>
+                            </div>
+                            <p class="project-desc">
+                                Cardiovascular (kalp ve damar) hastalık riskini tahmin eden karar destek sistemi.
+                                Projede Frontend arayüz geliştirme ve UX optimizasyonu süreçlerini yürüttüm.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>Python</span>
+                                <span>HTML/CSS</span>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="project-detail.html?id=vitacheck" class="btn btn-sm btn-primary"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    Detayları İncele
+                                </a>
+                                <a href="https://github.com/osmanfurkanerkan/AI_Grup89" target="_blank"
+                                    rel="noopener noreferrer" onclick="event.stopPropagation();"
+                                    class="btn btn-sm btn-outline" style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=aC1POkTmXVc" target="_blank"
+                                    rel="noopener noreferrer" onclick="event.stopPropagation();"
+                                    class="btn btn-sm btn-outline"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem; color: #ef4444; border-color: rgba(239, 68, 68, 0.25);">
+                                    <i class="fa-brands fa-youtube" style="color: #ef4444;"></i> Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 5: Randevu Sistemi -->
+                    <div class="project-card glass-card"
+                        onclick="window.location.href='project-detail.html?id=randevu-sistemi'"
+                        style="cursor: pointer;">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span class="w-dot dot-red"></span>
+                                <span class="w-dot dot-yellow"></span>
+                                <span class="w-dot dot-green"></span>
+                            </div>
+                            <div class="window-address-bar">
+                                <i class="fa-solid fa-lock" style="font-size: 0.6rem;"></i> Randevu Sistemi
+                            </div>
+                        </div>
+                        <div class="project-image-preview">
+                            <div class="project-ambient-bg"
+                                style="background-image: url('assets/projects/akademisyen_randevu_ss/randevu_ss_6.png');">
+                            </div>
+                            <img src="assets/projects/akademisyen_randevu_ss/randevu_ss_6.png"
+                                alt="Randevu Sistemi Önizleme">
+                            <span class="project-category"><i class="fa-solid fa-user"></i> Bireysel Proje</span>
+                        </div>
+                        <div class="project-content">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 0.5rem; flex-wrap: wrap;">
+                                <h3 class="project-title" style="margin-bottom: 0;">Akademisyen - Öğrenci Randevu
+                                    Sistemi</h3>
+                                <span
+                                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Nisan
+                                    2025</span>
+                            </div>
+                            <p class="project-desc">
+                                Akademisyen ve öğrenciler arasında gerçek zamanlı bildirim, takvim yönetimi ve randevu
+                                takibi sunan platform. Supabase (BaaS) ile güvenli veri akışı sağlar.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>JavaScript</span>
+                                <span>Supabase (BaaS)</span>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="project-detail.html?id=randevu-sistemi" class="btn btn-sm btn-primary"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    Detayları İncele
+                                </a>
+                                <a href="https://youtu.be/GodJ5BhuRhQ" target="_blank" rel="noopener noreferrer"
+                                    onclick="event.stopPropagation();" class="btn btn-sm btn-outline"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem; color: #ef4444; border-color: rgba(239, 68, 68, 0.25);">
+                                    <i class="fa-brands fa-youtube" style="color: #ef4444;"></i> Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 6: İSKA Otomasyonu -->
+                    <div class="project-card glass-card"
+                        onclick="window.location.href='project-detail.html?id=iska-otomasyon'" style="cursor: pointer;">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span class="w-dot dot-red"></span>
+                                <span class="w-dot dot-yellow"></span>
+                                <span class="w-dot dot-green"></span>
+                            </div>
+                            <div class="window-address-bar">
+                                <i class="fa-solid fa-gear" style="font-size: 0.6rem;"></i> İSKA Otomasyonu
+                            </div>
+                        </div>
+                        <div class="project-image-preview">
+                            <div class="project-ambient-bg"
+                                style="background-image: url('assets/projects/iska_ss/iska_ss_1.png');"></div>
+                            <img src="assets/projects/iska_ss/iska_ss_1.png" alt="İSKA Otomasyonu Önizleme">
+                            <span class="project-category"><i class="fa-solid fa-user"></i> Bireysel Proje</span>
+                        </div>
+                        <div class="project-content">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 0.5rem; flex-wrap: wrap;">
+                                <h3 class="project-title" style="margin-bottom: 0;">İSKA Akademi Yönetim Otomasyonu</h3>
+                                <span
+                                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Aralık
+                                    2024</span>
+                            </div>
+                            <p class="project-desc">
+                                Eğitim kurumları için kapsamlı öğrenci, personel ve ders takip otomasyonu. DevExpress
+                                bileşenleri ve MSSQL ile zengin raporlama ve takip modülleri sunar.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>C# (WinForms)</span>
+                                <span>DevExpress</span>
+                                <span>MSSQL</span>
+                            </div>
+                            <div class="project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="project-detail.html?id=iska-otomasyon" class="btn btn-sm btn-primary"
+                                    style="font-size: 0.78rem; padding: 0.4rem 0.9rem;">
+                                    Detayları İncele
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SERTİFİKALAR BÖLÜMÜ -->
+        <section class="section certificates-section" id="certificates">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Belgeler & Başarılar</span>
+                    <h2 class="section-title">Sertifikalar</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="certificates-grid">
+                    <!-- Sertifika 1: TURKCELL -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon" style="border-radius: 0;"><img
+                                src="assets/logos/certificates/gelecegi_yazanlar_logo.png"
+                                alt="Geleceği Yazanlar Logosu" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Prompt Mühendisliği Eğitimi</h3>
+                            <p class="cert-issuer">TURKCELL Geleceği Yazanlar</p>
+                            <div class="cert-footer">
+                                <span class="cert-date"
+                                    style="font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.4rem;"><i
+                                        class="fa-regular fa-calendar"></i> 29 Temmuz 2026</span>
+                                <a href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/dd89828f352e48e89359870c17ee392c"
+                                    target="_blank" rel="noopener noreferrer" class="cert-btn"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Görüntüle</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sertifika 2: TÜBİTAK -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon" style="border-radius: 0;"><img
+                                src="assets/logos/certificates/tubitak_logo.png" alt="TÜBİTAK Logosu"
+                                style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Millî Teknoloji Kulüpler Birliği Akademisi</h3>
+                            <p class="cert-issuer">TÜBİTAK Bilim ve Toplum Başkanlığı</p>
+                            <p
+                                style="font-size: 0.82rem; color: var(--text-muted); margin: 0.35rem 0; line-height: 1.4;">
+                                Erzurum Aşkale Gençlik Kampı</p>
+                            <div class="cert-footer">
+                                <span class="cert-date"
+                                    style="font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.4rem;"><i
+                                        class="fa-regular fa-calendar"></i> 20-23 Mayıs 2026</span>
+                                <a href="https://drdogrulama.sanayi.gov.tr/en/verify/88918522488141/?ref=email"
+                                    target="_blank" rel="noopener noreferrer" class="cert-btn"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Görüntüle</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sertifika 3: BTK Akademi -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon" style="border-radius: 0;"><img
+                                src="assets/logos/certificates/btk_logo.png" alt="BTK Akademi Logosu"
+                                style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Yapay Zeka Zirvesi 2024</h3>
+                            <p class="cert-issuer">BTK Akademi & Google & Girişimcilik Vakfı</p>
+                            <div class="cert-footer">
+                                <span class="cert-date"
+                                    style="font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.4rem;"><i
+                                        class="fa-regular fa-calendar"></i> 24 Aralık 2024</span>
+                                <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=6laGcN9bdde"
+                                    target="_blank" rel="noopener noreferrer" class="cert-btn"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Görüntüle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FOOTER / İLETİŞİM BÖLÜMÜ -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Bana Ulaşın</span>
+                    <h2 class="section-title">İletişim</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-box glass-card">
+                    <!-- İnce bir arka plan ışıltısı -->
+                    <div
+                        style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(99,102,241,0.04) 0%, transparent 50%); z-index: 0; pointer-events: none;">
+                    </div>
+
+                    <div style="position: relative; z-index: 1; margin-bottom: 2.5rem;">
+                        <h3 style="font-size: 1.85rem; margin-bottom: 1rem; font-weight: 700; letter-spacing: -0.5px;">
+                            Bir Projeniz mi Var?</h3>
+                        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin: 0 auto;">
+                            Yeni fikirler duymayı ve teknoloji odaklı çözümler üretmeyi seviyorum. Sorularınız veya iş
+                            birlikleri için bana e-posta üzerinden kolayca ulaşabilirsiniz.</p>
+                    </div>
+
+                    <!-- E-Posta Kutusu (Premium Hap/Pill Tasarımı) Centered Flex Wrapper -->
+                    <div
+                        style="display: flex; justify-content: center; width: 100%; margin-bottom: 2.5rem; position: relative; z-index: 1;">
+                        <a href="javascript:void(0)" class="contact-email-btn" id="quick-copy-email"
+                            data-email="ishakkaratas.tech@gmail.com" style="margin-bottom: 0;">
+                            <div class="contact-email-icon">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </div>
+                            <div class="contact-email-text">
+                                <span class="contact-email-label">Bana Yazın</span>
+                                <span class="contact-email-address">ishakkaratas.tech@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Sosyal Medya -->
+                    <div>
+                        <h4
+                            style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                            Sosyal Medya Ağları</h4>
+                        <div class="social-links-large"
+                            style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="https://www.linkedin.com/in/ishak-karata%C5%9F-7420802b3/" target="_blank"
+                                rel="noopener noreferrer" class="social-btn linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/ishakkaratas05" target="_blank" rel="noopener noreferrer"
+                                class="social-btn github">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="https://www.instagram.com/kodkasifi_404/" target="_blank" rel="noopener noreferrer"
+                                class="social-btn instagram">
+                                <i class="fa-brands fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">İSHAK KARATAŞ</span>
+                <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="footer-center">
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/in/ishak-karata%C5%9F-7420802b3/" target="_blank" rel="noopener noreferrer" class="footer-social-btn linkedin" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/ishakkaratas05" target="_blank" rel="noopener noreferrer" class="footer-social-btn github" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kodkasifi_404/" target="_blank" rel="noopener noreferrer" class="footer-social-btn instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top-btn" aria-label="Yukarı Çık">
+                    <i class="fa-solid fa-arrow-up"></i> Yukarı Çık
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-notification" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">E-posta adresi panoya kopyalandı!</span>
+    </div>
+
+
+
+    <!-- Matter.js Physics Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

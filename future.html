@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTURE Topluluğu Çalışmalarım - İshak Karataş</title>
+    <meta name="description" content="FUTURE Topluluğu bünyesindeki liderlik, kurumsal tasarım, etkinlik yönetimi ve Canva tasarım çalışmalarımın detayları.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Inline Page Specific Style Overrides -->
+    <style>
+        .future-standalone-page {
+            padding-top: 8.5rem;
+            padding-bottom: 6rem;
+            min-height: 85vh;
+        }
+
+        .future-card {
+            padding: 3.5rem;
+            max-width: 980px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .future-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .future-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-glow);
+            color: var(--accent-primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .future-brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1.2rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .future-brand-badge img {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+        }
+
+        .future-section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: -0.3px;
+        }
+
+        .future-section-title i {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-sm);
+            background: var(--accent-glow);
+            color: var(--accent-primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .work-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .work-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .work-card-icon {
+            font-size: 1.8rem;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .work-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+        }
+
+        .work-card-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .work-highlight-text {
+            color: var(--text-secondary);
+            line-height: 1.75;
+            font-size: 1.02rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            background: var(--bg-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-item i.canvas-icon {
+            font-size: 2.5rem;
+            color: var(--accent-primary);
+            opacity: 0.85;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-item-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-item-info {
+            opacity: 1;
+        }
+
+        /* Instagram Feed Grid Styles */
+        .instagram-feed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.75rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Sonsuz Kayan Instagram Şeridi CSS Kuralları */
+        .instagram-marquee-container {
+            overflow: hidden;
+            width: 100%;
+            padding: 1.5rem 0.5rem;
+            position: relative;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin-top: 1.5rem;
+        }
+
+        .instagram-marquee-track {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: scrollInstagram 35s linear infinite;
+        }
+
+        .instagram-marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .instagram-marquee-track .instagram-post-card {
+            width: 290px;
+            flex-shrink: 0;
+        }
+
+        @keyframes scrollInstagram {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                /* 5 özgün post genişliği + 5 gap (290px * 5 + 24px * 5) sola kayma */
+                transform: translateX(calc(-290px * 5 - 1.5rem * 5));
+            }
+        }
+
+        /* Ses Slider Tasarımı */
+        #video-volume-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.3);
+            height: 4px;
+            border-radius: 2px;
+            outline: none;
+        }
+        #video-volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s;
+        }
+        #video-volume-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.3);
+        }
+        #video-volume-slider::-moz-range-thumb {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s;
+        }
+        #video-volume-slider::-moz-range-thumb:hover {
+            transform: scale(1.3);
+        }
+
+        .instagram-post-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-normal);
+        }
+
+        .instagram-post-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .instagram-card-header {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            gap: 0.5rem;
+        }
+
+        .instagram-user-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .instagram-user-avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .instagram-user-avatar-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instagram-user-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .instagram-card-image-area {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: rgba(99, 102, 241, 0.02);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-style: dashed;
+            border-width: 2px;
+            border-color: rgba(99, 102, 241, 0.3);
+            margin: -1px;
+            transition: var(--transition-fast);
+        }
+
+        .instagram-card-image-area:hover {
+            background: rgba(99, 102, 241, 0.05);
+            border-color: var(--accent-primary);
+        }
+
+        .instagram-card-footer {
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .instagram-action-icons {
+            display: flex;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .instagram-action-icons i {
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .instagram-action-icons i:hover {
+            color: var(--accent-primary);
+        }
+
+        .instagram-likes {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .instagram-caption {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .instagram-caption strong {
+            color: var(--text-primary);
+            margin-right: 0.25rem;
+        }
+
+        /* Events Timeline Styles */
+        .events-timeline {
+            position: relative;
+            margin-top: 2rem;
+            padding-left: 2rem;
+            border-left: 2px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        .timeline-event-item {
+            position: relative;
+            transition: var(--transition-normal);
+        }
+
+        .timeline-event-dot {
+            position: absolute;
+            left: calc(-2rem - 6px);
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            border: 2px solid var(--bg-primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+            transition: var(--transition-fast);
+        }
+
+        .timeline-event-item:hover .timeline-event-dot {
+            background: var(--text-primary);
+            transform: scale(1.3);
+            box-shadow: 0 0 0 6px var(--accent-glow);
+        }
+
+        .timeline-event-date {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-event-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-event-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Mobile Mockup Styles (Samsung Style Infinity-O Display) */
+        .mobile-mockup-frame {
+            width: 210px;
+            height: 420px;
+            border-radius: 20px;
+            border: 6px solid var(--text-primary);
+            background: var(--bg-primary);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .mobile-mockup-frame:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mobile-punch-hole {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #000000;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .mobile-viewport-mini {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .future-card {
+                padding: 1.75rem;
+            }
+            .future-standalone-page {
+                padding-top: 7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bilimsel Kareli Arka Plan & Süzülen Düğümler Ağ Katmanı -->
+    <div class="math-grid-bg"></div>
+    <canvas id="bg-scientific-canvas" class="bg-scientific-canvas"></canvas>
+    
+    <!-- Süzülen Teknoloji İkonları -->
+    <div class="floating-tech-icons">
+        <div class="tech-icon t-icon-1" title="HTML5"><i class="fa-brands fa-html5"></i></div>
+        <div class="tech-icon t-icon-2" title="React"><i class="fa-brands fa-react"></i></div>
+        <div class="tech-icon t-icon-3" title="Python"><i class="fa-brands fa-python"></i></div>
+        <div class="tech-icon t-icon-4" title="GitHub"><i class="fa-brands fa-github"></i></div>
+        <div class="tech-icon t-icon-5" title="Canva"><i class="fa-solid fa-palette"></i></div>
+        <div class="tech-icon t-icon-6" title="Database"><i class="fa-solid fa-database"></i></div>
+        <div class="tech-icon t-icon-7" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+        <div class="tech-icon t-icon-8" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
+    </div>
+
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar-header" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html#hero" class="nav-brand" id="nav-logo">
+                <span class="brand-first">İSHAK</span>
+                <span class="brand-last">KARATAŞ</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#about" class="nav-link">Hakkımda</a></li>
+                    <li><a href="index.html#education" class="nav-link">Eğitim</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Deneyim</a></li>
+                    <li><a href="index.html#community" class="nav-link">FUTURE Topluluğu</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projelerim</a></li>
+                    <li><a href="index.html#certificates" class="nav-link">Sertifikalar</a></li>
+                    <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog <span class="badge-soon">Yakında</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Karanlık/Aydınlık Tema Değiştir">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </button>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="future-standalone-page">
+        <div class="container">
+            <div class="glass-card future-card">
+                
+                <!-- Yeni Tasarım: Başlangıçta logomuz sağda büyük bir şekilde bizi karşılıyor -->
+                <div class="future-header" style="display: flex; justify-content: space-between; align-items: center; gap: 2.5rem; flex-wrap: wrap; text-align: left; border-bottom: 1px solid var(--border-color); padding-bottom: 3rem; margin-bottom: 3rem;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <span class="future-badge-pill" style="margin-bottom: 1rem;"><i class="fa-solid fa-users"></i> Topluluk Serüvenim</span>
+                        <h1 class="section-title" style="font-size: 2.6rem; margin-bottom: 0.75rem; letter-spacing: -0.5px; text-align: left;">FUTURE Topluluğu</h1>
+                        <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; max-width: 620px; margin: 0;">
+                            Üniversitemizde aktif olarak faaliyet gösteren bir girişimcilik topluluğu olmadığı için bizler de arkadaşlar olarak bir araya geldik. Teknoloji odaklı girişimcilik topluluğu FUTURE'ı kurup bir maceraya başladık. Bu bölümde yaptığımız faaliyetlerden bahsedeceğim.
+                        </p>
+                    </div>
+                    
+                    <!-- Büyük yuvarlak logo sağ tarafta konumlandırıldı -->
+                    <div class="future-logo-showcase" style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto;">
+                        <div class="large-logo-circle" style="width: 175px; height: 175px; border-radius: 50%; border: 4px solid var(--border-color); padding: 8px; background: var(--bg-primary); display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.06) rotate(3deg)'; this.style.borderColor='#800020'; this.style.boxShadow='0 15px 30px rgba(128, 0, 32, 0.25)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--border-color)'; this.style.boxShadow='var(--shadow-md)';" title="Benim Tasarımım">
+                            <img src="assets/logos/experience/future_logo.png" alt="FUTURE Logo Tasarımı" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #800020; margin-top: 0.85rem; text-transform: uppercase; letter-spacing: 1.2px; background: rgba(128, 0, 32, 0.05); padding: 0.3rem 0.9rem; border-radius: var(--radius-sm); border: 1px solid rgba(128, 0, 32, 0.2);">Logo Tasarımım</div>
+                    </div>
+                </div>
+
+                <div class="future-body">
+                    
+                    <!-- Benim Gözümden FUTURE -->
+                    <div class="future-section" style="margin-bottom: 3.5rem;">
+                        <h2 class="future-section-title">
+                            <i class="fa-solid fa-graduation-cap"></i> Benim Gözümden FUTURE
+                        </h2>
+                        <p class="work-highlight-text" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+                            Her şey başkanla bir kantinde çay içerkenki bir sohbetimizde başladı. O zamanlar sadece bir fikirdi, şimdiyse büyük bir ekosistem. Üniversitemiz bünyesinde aktif faaliyet gösteren bir girişimcilik topluluğu olmaya karar verdik; uğraştık, emek verdik, zorlandığımız zamanlar da oldu ama bugün bu seviyeye ulaştık. İlk günden beri amacımız üniversitemiz bünyesinde her bölümden öğrenciyi kariyerinde geliştirecek etkinlikler yapmaktı. Biraz farklı olanı yapmak istiyorduk. Bu süreçte IDEATHON, fikrin mülkiyeti, patent yarışması vb. etkinlikleri düzenlemek için uğraştık.
+                        </p>
+                    </div>
+
+                    <!-- Üstlendiğim Roller (Alt alta tablo görünümü) -->
+                    <div class="future-section" style="margin-bottom: 3.5rem; border-top: 1px solid var(--border-color); padding-top: 2.5rem;">
+                        <h2 class="future-section-title">
+                            <i class="fa-solid fa-sitemap"></i> Üstlendiğim Roller
+                        </h2>
+                        <p class="work-highlight-text" style="margin-bottom: 1.5rem;">
+                            Topluluk bünyesinde sorumluluk alarak koordinasyon ve yönetim süreçlerine katkı sağlamaya çalıştım: bu süreçte çeşitli roller üstlendim
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 0.85rem; width: 100%;">
+                            <!-- Kurucu Üyelik -->
+                            <div style="display: flex; align-items: center; gap: 1rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-primary); padding: 1.15rem 1.5rem; border-radius: var(--radius-md); transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; cursor: default;" onmouseover="this.style.transform='translateX(6px)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none'; this.style.borderColor='var(--border-color)';">
+                                <i class="fa-solid fa-feather-pointed" style="color: var(--accent-primary); font-size: 1.1rem; opacity: 0.9; width: 20px; text-align: center;"></i>
+                                <span style="font-weight: 600; color: var(--text-primary); font-size: 1rem;">Kurucu Üyelik</span>
+                            </div>
+                            <!-- Komite Başkanlığı -->
+                            <div style="display: flex; align-items: center; gap: 1rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-primary); padding: 1.15rem 1.5rem; border-radius: var(--radius-md); transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; cursor: default;" onmouseover="this.style.transform='translateX(6px)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none'; this.style.borderColor='var(--border-color)';">
+                                <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-primary); font-size: 1.1rem; opacity: 0.9; width: 20px; text-align: center;"></i>
+                                <span style="font-weight: 600; color: var(--text-primary); font-size: 1rem;">Sosyal Medya & Tasarım Komite Başkanlığı</span>
+                            </div>
+                            <!-- Yönetim Kurulu Üyeliği -->
+                            <div style="display: flex; align-items: center; gap: 1rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-primary); padding: 1.15rem 1.5rem; border-radius: var(--radius-md); transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; cursor: default;" onmouseover="this.style.transform='translateX(6px)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none'; this.style.borderColor='var(--border-color)';">
+                                <i class="fa-solid fa-users" style="color: var(--accent-primary); font-size: 1.1rem; opacity: 0.9; width: 20px; text-align: center;"></i>
+                                <span style="font-weight: 600; color: var(--text-primary); font-size: 1rem;">Yönetim Kurulu Üyeliği</span>
+                            </div>
+                            <!-- Başkan Yardımcılığı -->
+                            <div style="display: flex; align-items: center; gap: 1rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-primary); padding: 1.15rem 1.5rem; border-radius: var(--radius-md); transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; cursor: default;" onmouseover="this.style.transform='translateX(6px)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none'; this.style.borderColor='var(--border-color)';">
+                                <i class="fa-solid fa-hands-holding" style="color: var(--accent-primary); font-size: 1.1rem; opacity: 0.9; width: 20px; text-align: center;"></i>
+                                <span style="font-weight: 600; color: var(--text-primary); font-size: 1rem;">Başkan Yardımcılığı</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sosyal Medya ve Tasarım Komitesi (Kullanıcının en sevdiği yer) -->
+                    <div class="future-section" style="margin-bottom: 3.5rem; border-top: 1px solid var(--border-color); padding-top: 2.5rem;">
+                        <h2 class="future-section-title">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Sosyal Medya & Tasarım Komitesi
+                        </h2>
+                        <p class="work-highlight-text" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+                            Topluluk serüvenim boyunca benim için en eğlenceli ve keyifli yer tasarım komitesi oldu. Sosyal medya platformlarımızda paylaşılan görselleri, etkinlik duyurularını ve yaka kartları gibi basılı malzemeleri hazırlarken tasarım yapmaktan ve yeni şablonlar üretmekten büyük keyif aldım. Canva üzerinde yaptığım bu çalışmalar, topluluğumuzun dijital yüzünü oluştururken benim için de harika bir pratik alanı oldu.
+                        </p>
+                    </div>
+
+                    <!-- Düzenlediğimiz Etkinlikler -->
+                    <div class="future-section" style="margin-bottom: 3.5rem; border-top: 1px solid var(--border-color); padding-top: 2.5rem;">
+                        <h2 class="future-section-title">
+                            <i class="fa-solid fa-calendar-days"></i> Düzenlediğimiz Etkinlikler & Çalışmalar
+                        </h2>
+                        <p class="work-highlight-text">
+                            Topluluk olarak dönem boyunca düzenlediğimiz, katılım sağladığımız stant ve organizasyonlar:
+                        </p>
+                        
+                        <div class="events-timeline">
+                            <!-- Event 1 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">21-22 Ekim 2025</div>
+                                <h3 class="timeline-event-title">İlk Stant Etkinliği</h3>
+                                <p class="timeline-event-desc">FÜ Öğrenci Toplulukları Tanıtım Günleri'nde standımızı açarak topluluk faaliyetlerimizi öğrenci arkadaşlarımıza tanıttık ve üye kayıtlarımızı aldık.</p>
+                            </div>
+                            
+                            <!-- Event 2 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">21 Aralık 2025</div>
+                                <h3 class="timeline-event-title">FUTURE IDEATHON’25</h3>
+                                <p class="timeline-event-desc">Üyelerimizin takımlar halinde katılarak girişimcilik ve teknoloji odaklı fikirler geliştirdiği ve sunumlar yaptığı yarışma etkinliğimiz.</p>
+                            </div>
+                            
+                            <!-- Event 3 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">12 Mart 2026</div>
+                                <h3 class="timeline-event-title">FUTURE Core Team İftar Yemeği</h3>
+                                <p class="timeline-event-desc">Yönetim ve komite sorumlusu arkadaşlarımızla bir araya gelerek dönem planlarını konuştuğumuz iftar organizasyonumuz.</p>
+                            </div>
+                            
+                            <!-- Event 4 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">28 Nisan 2026</div>
+                                <h3 class="timeline-event-title">Savunma Sanayi Kampüs Elazığ Stant Etkinliği</h3>
+                                <p class="timeline-event-desc">Savunma Sanayii Kampüs Elazığ etkinliğinin gerçekleştirildiği gün, diğer teknoloji odaklı öğrenci toplulukları gibi biz de sahada yerimizi alarak standımızı açtık ve topluluğumuzu temsil ettik.</p>
+                            </div>
+                            
+                            <!-- Event 5 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">30 Nisan 2026</div>
+                                <h3 class="timeline-event-title">Fikrin Mülkiyeti Etkinliği</h3>
+                                <p class="timeline-event-desc">Teknoloji fikirlerinin patentlenmesi, fikir haklarının korunması ve mülkiyet süreçleri hakkında gerçekleştirdiğimiz seminer.</p>
+                            </div>
+                            
+                            <!-- Event 6 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">12-13 Mayıs 2026</div>
+                                <h3 class="timeline-event-title">Bilim ve Öğrenci Festivali Stant Etkinliği</h3>
+                                <p class="timeline-event-desc">Üniversitemizin geleneksel bahar şenlikleri kapsamında kurduğumuz stantla topluluğumuzu ve çalışmalarımızı kampüs geneline sunduk.</p>
+                            </div>
+                            
+                            <!-- Event 7 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">15 Mayıs - 15 Haziran 2026</div>
+                                <h3 class="timeline-event-title">Patent Yarışması 2026</h3>
+                                <p class="timeline-event-desc">Üniversite rektörlüğümüz ile birlikte yürüttüğümüz, öğrenci arkadaşlarımızı patent almaya teşvik eden ve dereceye girenlere para ödüllerinin sunulduğu yarışma organizasyonudur. 15 Mayıs'ta duyurusunu gerçekleştirdiğimiz yarışma, 15 Haziran'da sonuçlanmıştır.</p>
+                            </div>
+                            
+                            <!-- Event 8 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">15-23 Mayıs 2026</div>
+                                <h3 class="timeline-event-title">TÜBİTAK Bilim Kamplarına Katılım</h3>
+                                <p class="timeline-event-desc">TÜBİTAK Milli Teknoloji Kulüpler Birliği kamp programı kapsamında, 15-17 Mayıs tarihlerinde düzenlenen Gaziantep kampına ve 20-23 Mayıs tarihlerinde düzenlenen Erzurum kampına katılım sağladık.</p>
+                            </div>
+                            
+                            <!-- Event 9 -->
+                            <div class="timeline-event-item">
+                                <div class="timeline-event-dot"></div>
+                                <div class="timeline-event-date">6 Haziran 2026</div>
+                                <h3 class="timeline-event-title">FUTURE Core Team Dönem Kapanış Pikniği</h3>
+                                <p class="timeline-event-desc">Dönem boyunca yürüttüğümüz çalışmaların ardından yönetim ekibimizle birlikte düzenlediğimiz dönem sonu motivasyon pikniğimiz.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bilgi Yarışması Video Sunumu -->
+                    <div class="future-section" style="margin-bottom: 3.5rem; border-top: 1px solid var(--border-color); padding-top: 2.5rem;">
+                        <div style="display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 280px;">
+                                <h2 class="future-section-title" style="margin-top: 0;">
+                                    <i class="fa-solid fa-comments"></i> İletişim & Sosyalleşme
+                                </h2>
+                                <p class="work-highlight-text" style="margin-bottom: 1.25rem;">
+                                    Özellikle stant günlerimizde standa gelen arkadaşlarımızla kaynaşmak ve eğlenceli anlar yaratmak için küçük ödüllü bilgi yarışmaları düzenlemeye bayılıyorum. Hem insanlarla iletişimimi hem de sosyalleşme becerilerimi geliştirdiğine inanıyorum. Aramızda kalsın ama bu işi o kadar çok seviyorum ki sunuculuk yapmayı genellikle başkasına kaptırmıyorum : ) Sunuculuk yaptığım yarışmalardan birine ait sosyal medya videosuna yan taraftan göz atabilirsiniz.
+                                </p>
+                                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.95rem; color: var(--text-secondary);">
+                                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fa-solid fa-check" style="color: var(--accent-primary);"></i>
+                                        <span>Stant Günlerinde Küçük Ödüllü Yarışmalar</span>
+                                    </li>
+                                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fa-solid fa-check" style="color: var(--accent-primary);"></i>
+                                        <span>Ziyaretçilerle Samimi İletişim & Sosyalleşme</span>
+                                    </li>
+                                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fa-solid fa-check" style="color: var(--accent-primary);"></i>
+                                        <span>Eğlenceli ve İnteraktif Sahne Sunuculuğu</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Telefon Çerçevesinde Saf Video Oynatıcı -->
+                            <div style="flex-shrink: 0; margin: 0 auto;">
+                                <div class="mobile-mockup-frame" style="width: 220px; height: 440px; border-radius: 20px; border: 6px solid var(--text-primary); cursor: default;">
+                                    <div class="mobile-punch-hole"></div>
+                                    <div class="mobile-viewport-mini" style="background: #000; height: 100%; position: relative;">
+                                        <!-- Fallback sevimli ekran -->
+                                        <div id="video-fallback-screen" style="display: flex; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 5; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; color: var(--text-muted); background: #0b0f19; gap: 0.8rem; font-family: inherit;">
+                                            <div style="font-size: 3rem; animation: float 3s ease-in-out infinite;">👻</div>
+                                            <span style="font-size: 0.85rem; font-weight: 700; color: #fff; margin-top: 0.5rem;">Uf! Video Kaçmış...</span>
+                                            <span style="font-size: 0.72rem; line-height: 1.5; color: rgba(255, 255, 255, 0.7); max-width: 160px; margin: 0 auto;">
+                                                Şu an bu videoya ulaşamıyoruz. Sanırım yaramaz pikseller yer değiştirmiş! En kısa sürede geri getireceğiz.
+                                            </span>
+                                        </div>
+
+                                        <!-- Saf Video -->
+                                        <video id="instagram-presentation-video" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;" autoplay loop muted playsinline>
+                                            <source src="assets/projects/future_calismalarim/video/bilgi-yarismasiı-part-1.mp4" type="video/mp4">
+                                            Tarayıcınız video etiketini desteklemiyor.
+                                        </video>
+
+                                        <!-- Ses Seviyesi Kontrol Grubu -->
+                                        <div id="video-volume-controls" style="position: absolute; bottom: 12px; left: 12px; right: 12px; z-index: 10; display: flex; align-items: center; gap: 8px; background: rgba(0, 0, 0, 0.7); padding: 6px 12px; border-radius: 20px; transition: opacity 0.3s, background-color 0.3s; opacity: 0.65;" onmouseover="this.style.opacity='1'; this.style.backgroundColor='rgba(0, 0, 0, 0.85)'" onmouseout="this.style.opacity='0.65'; this.style.backgroundColor='rgba(0, 0, 0, 0.7)'">
+                                            <!-- Ses Aç/Kapa Butonu -->
+                                            <button id="video-sound-toggle" style="background: none; border: none; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; width: 22px; height: 22px; outline: none;" title="Sesi Aç/Kapa">
+                                                <i class="fa-solid fa-volume-xmark" id="sound-icon" style="font-size: 0.85rem;"></i>
+                                            </button>
+                                            <!-- Ses Seviyesi Slider'ı -->
+                                            <input type="range" id="video-volume-slider" min="0" max="1" step="0.05" value="0" style="flex: 1; cursor: pointer;" title="Ses Seviyesi">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tasarımlarımdan Örnekler (Birleştirilmiş Başlık - Öncelik Instagram Post Vitrininde) -->
+                    <div class="future-section" style="margin-bottom: 3.5rem; border-top: 1px solid var(--border-color); padding-top: 2.5rem;">
+                        <h2 class="future-section-title">
+                            <i class="fa-solid fa-images"></i> Tasarımlarımdan Örnekler
+                        </h2>
+                        
+                        <!-- Kısım 1: Yatayda Kayıp Dönen Instagram Gönderileri -->
+                        <div class="instagram-marquee-container" style="margin-bottom: 3.5rem;">
+                            <div class="instagram-marquee-track">
+                                <!-- Orijinal 5 Gönderi -->
+                                <!-- Post 1 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (1).png" alt="IDEATHON Nedir 1" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>FUTURE IDEATHON'25 nedir? Topluluk bünyesinde yürüttüğümüz heyecan dolu etkinliğin ilk tanıtım paylaşımı.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post 2 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (2).png" alt="IDEATHON Nedir 2" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>Etkinlik detayları ve hedeflerimiz. Her bölümden katılan öğrenci arkadaşlarımıza sunduğumuz fırsatlar.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post 3 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (3).png" alt="IDEATHON Nedir 3" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>Yarışma kuralları ve katılım süreci hakkında hazırladığım bilgilendirici post serisi.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post 4 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (4).png" alt="IDEATHON Nedir 4" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>IDEATHON süresince dikkat edilecek kilit konular ve mentor görüşmeleri için hazırladığım tasarım slaytı.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post 5 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/JÜRİ Instagram Gönderisi.png" alt="Jüri Duyurusu" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>Değerli jüri üyelerimizin duyurusu için hazırladığım özel paylaşım görseli.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sonsuz Döngü İçin Klonlanan 5 Gönderi (Aynı Sırayla) -->
+                                <!-- Klon 1 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (1).png" alt="IDEATHON Nedir 1" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>FUTURE IDEATHON'25 nedir? Topluluk bünyesinde yürüttüğümüz heyecan dolu etkinliğin ilk tanıtım paylaşımı.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Klon 2 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (2).png" alt="IDEATHON Nedir 2" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>Etkinlik detayları ve hedeflerimiz. Her bölümden katılan öğrenci arkadaşlarımıza sunduğumuz fırsatlar.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Klon 3 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (3).png" alt="IDEATHON Nedir 3" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>Yarışma kuralları ve katılım süreci hakkında hazırladığım bilgilendirici post serisi.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Klon 4 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/IDEATHON nedir (4).png" alt="IDEATHON Nedir 4" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>IDEATHON süresince dikkat edilecek kilit konular ve mentor görüşmeleri için hazırladığım tasarım slaytı.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Klon 5 -->
+                                <div class="instagram-post-card">
+                                    <div class="instagram-card-header">
+                                        <div class="instagram-user-avatar">
+                                            <div class="instagram-user-avatar-inner">
+                                                <img src="assets/logos/experience/future_logo.png" alt="FUTURE logo">
+                                            </div>
+                                        </div>
+                                        <span class="instagram-user-name">future_firat</span>
+                                    </div>
+                                    <div class="instagram-card-image-area" style="border-style: solid; border-width: 1px; border-color: var(--border-color); padding: 0;">
+                                        <img src="assets/projects/future_calismalarim/JÜRİ Instagram Gönderisi.png" alt="Jüri Duyurusu" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="instagram-card-footer">
+                                        <div class="instagram-caption">
+                                            <strong>future_firat</strong>Değerli jüri üyelerimizin duyurusu için hazırladığım özel paylaşım görseli.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: flex-start; margin-bottom: 3.5rem;">
+                            <!-- Afiş (Dikey) -->
+                            <div style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 0; padding: 1.25rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.75rem; transition: var(--transition-normal);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+                                <div style="width: 100%; border-radius: 0; overflow: hidden; border: 1px solid var(--border-color); background: transparent;">
+                                    <img src="assets/projects/future_calismalarim/poster.png" alt="IDEATHON Poster" style="width: 100%; height: auto; display: block; max-height: 520px; object-fit: contain; margin: 0 auto;">
+                                </div>
+                                <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-top: 0.5rem; display: block; text-align: center;">Tanıtım Posteri (Afiş)</span>
+                            </div>
+                            
+                            <!-- Yatay Çalışmalar Kolonu (Branda ve Teşekkür Belgesi) -->
+                            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                                <!-- Branda (Yatay) -->
+                                <div style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 0; padding: 1.25rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.75rem; transition: var(--transition-normal);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+                                    <div style="width: 100%; border-radius: 0; overflow: hidden; border: 1px solid var(--border-color); background: transparent;">
+                                        <img src="assets/projects/future_calismalarim/future_branda.png" alt="FUTURE Branda" style="width: 100%; height: auto; display: block; max-height: 520px; object-fit: contain; margin: 0 auto;">
+                                    </div>
+                                    <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-top: 0.5rem; display: block; text-align: center;">Etkinlik Alanı Marka Brandası</span>
+                                </div>
+
+                                <!-- Fikrin Mülkiyeti Teşekkür Belgesi (Yatay) -->
+                                <div style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 0; padding: 1.25rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.75rem; transition: var(--transition-normal);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+                                    <div style="width: 100%; border-radius: 0; overflow: hidden; border: 1px solid var(--border-color); background: transparent;">
+                                        <img src="assets/projects/future_calismalarim/FM Teşekkür Belgesi.png" alt="Fikrin Mülkiyeti Teşekkür Belgesi" style="width: 100%; height: auto; display: block; max-height: 520px; object-fit: contain; margin: 0 auto;">
+                                    </div>
+                                    <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-top: 0.5rem; display: block; text-align: center;">Fikrin Mülkiyeti Teşekkür Belgesi Şablonu</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Niceleri Metni -->
+                        <p style="text-align: center; font-style: italic; color: var(--text-muted); font-size: 0.95rem; margin-top: 2rem; margin-bottom: 0.5rem; letter-spacing: 0.5px;">
+                            ...ve daha buraya koyamadığım niceleri.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="back-btn-wrap" style="margin-top: 3.5rem; border-top: 1px solid var(--border-color); padding-top: 2rem; display: flex; justify-content: flex-start;">
+                    <a href="index.html#community" class="btn btn-primary" style="padding: 0.75rem 1.5rem; display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none;">
+                        <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Geri Dön
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">İSHAK KARATAŞ</span>
+                <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="footer-center">
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/in/ishak-karata%C5%9F-7420802b3/" target="_blank" rel="noopener noreferrer" class="footer-social-btn linkedin" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/ishakkaratas05" target="_blank" rel="noopener noreferrer" class="footer-social-btn github" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kodkasifi_404/" target="_blank" rel="noopener noreferrer" class="footer-social-btn instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="index.html" class="back-to-top-btn" aria-label="Ana Sayfa">
+                    <i class="fa-solid fa-house"></i> Ana Sayfa
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('instagram-presentation-video');
+            const fallback = document.getElementById('video-fallback-screen');
+            const soundToggle = document.getElementById('video-sound-toggle');
+            const soundIcon = document.getElementById('sound-icon');
+            
+            if (video && fallback) {
+                // Video başarılı şekilde yüklendiğinde önlem ekranını gizle
+                video.addEventListener('canplay', () => {
+                    fallback.style.display = 'none';
+                });
+
+                // Video yüklenirken hata oluşursa (dosya yoksa) önlem ekranını görünür tut/yap
+                video.addEventListener('error', () => {
+                    fallback.style.display = 'flex';
+                });
+            }
+
+            const volumeSlider = document.getElementById('video-volume-slider');
+
+            if (video && soundToggle && soundIcon && volumeSlider) {
+                // Başlangıçta video muted olduğu için ses seviyesini 0 yapıyoruz
+                video.volume = 0;
+                volumeSlider.value = 0;
+
+                const updateVolume = (val) => {
+                    video.volume = val;
+                    volumeSlider.value = val;
+                    if (val === 0) {
+                        video.muted = true;
+                        soundIcon.className = 'fa-solid fa-volume-xmark';
+                    } else {
+                        video.muted = false;
+                        if (val < 0.4) {
+                            soundIcon.className = 'fa-solid fa-volume-low';
+                        } else {
+                            soundIcon.className = 'fa-solid fa-volume-high';
+                        }
+                    }
+                };
+
+                // Kaydırıcı sürükleme olayı
+                volumeSlider.addEventListener('input', (e) => {
+                    updateVolume(parseFloat(e.target.value));
+                });
+
+                // Ses ikonuna tıklama olayı
+                soundToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (video.volume > 0 && !video.muted) {
+                        updateVolume(0);
+                    } else {
+                        updateVolume(0.5); // Varsayılan açılış sesi %50
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

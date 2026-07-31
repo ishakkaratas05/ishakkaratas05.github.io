@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - İshak Karataş | Yazılım Mühendisliği Öğrencisi</title>
+    <meta name="description" content="İshak Karataş Blog - Teknoloji, Yazılım Mühendisliği ve Topluluk Deneyimleri Yazıları.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lock Animation Style Override -->
+    <style>
+        .lock-icon-container {
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            user-select: none;
+            display: inline-block;
+        }
+
+        .lock-icon-circle {
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #f43f5e 20%, #be123c 80%); /* Melted red wax */
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 2;
+            transform: rotate(-8deg); /* Vintage stamp angle */
+            border: none;
+            box-shadow: 
+                inset 0 3px 6px rgba(255, 255, 255, 0.3),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.4),
+                0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Irregular outer melted wax shell */
+        .lock-icon-circle::before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 44% 56% 50% 50% / 54% 46% 54% 46%;
+            background: #9f1239;
+            z-index: -1;
+            box-shadow: 
+                inset 0 2px 4px rgba(255, 255, 255, 0.25),
+                0 3px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        /* Inner seal border ring */
+        .lock-icon-circle::after {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(255, 255, 255, 0.3);
+            pointer-events: none;
+        }
+
+        .lock-icon-container:hover .lock-icon-circle {
+            transform: scale(1.05) rotate(-4deg);
+            box-shadow: 
+                inset 0 3px 6px rgba(255, 255, 255, 0.4),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.3),
+                0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .lock-icon-container.unlocked .lock-icon-circle {
+            transform: scale(1.1) rotate(6deg);
+            background: radial-gradient(circle, #34d399 20%, #065f46 80%); /* Green wax when unlocked */
+            box-shadow: 
+                inset 0 3px 6px rgba(255, 255, 255, 0.3),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.4),
+                0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .lock-icon-container.unlocked .lock-icon-circle::before {
+            background: #047857;
+        }
+
+        .lock-spark {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 1;
+            pointer-events: none;
+            z-index: 3;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bilimsel Kareli Arka Plan & Süzülen Düğümler Ağ Katmanı -->
+    <div class="math-grid-bg"></div>
+    <canvas id="bg-scientific-canvas" class="bg-scientific-canvas"></canvas>
+    
+    <!-- Süzülen Teknoloji İkonları -->
+    <div class="floating-tech-icons">
+        <div class="tech-icon t-icon-1" title="HTML5"><i class="fa-brands fa-html5"></i></div>
+        <div class="tech-icon t-icon-2" title="React"><i class="fa-brands fa-react"></i></div>
+        <div class="tech-icon t-icon-3" title="Python"><i class="fa-brands fa-python"></i></div>
+        <div class="tech-icon t-icon-4" title="GitHub"><i class="fa-brands fa-github"></i></div>
+        <div class="tech-icon t-icon-5" title="C#"><span class="tech-badge-csharp">C#</span></div>
+        <div class="tech-icon t-icon-6" title="MongoDB / Database"><i class="fa-solid fa-database"></i></div>
+        <div class="tech-icon t-icon-7" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+        <div class="tech-icon t-icon-8" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
+    </div>
+
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- HEADER / NAVIGATION (PREMIUM TYPOGRAPHY BRANDING) -->
+    <header class="navbar-header" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html#hero" class="nav-brand" id="nav-logo">
+                <span class="brand-first">İSHAK</span>
+                <span class="brand-last">KARATAŞ</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#about" class="nav-link">Hakkımda</a></li>
+                    <li><a href="index.html#education" class="nav-link">Eğitim</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Deneyim</a></li>
+                    <li><a href="index.html#community" class="nav-link">FUTURE Topluluğu</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projelerim</a></li>
+                    <li><a href="index.html#certificates" class="nav-link">Sertifikalar</a></li>
+                    <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog <span class="badge-soon">Yakında</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Karanlık/Aydınlık Tema Değiştir">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </button>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-standalone-page">
+        <div class="container">
+            <div class="blog-page-header center">
+                <span class="section-subtitle">Düşünceler & Yazılar</span>
+                <h1 class="section-title">İshak Karataş Blog</h1>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="blog-grid">
+                <div class="notebook-container">
+                    <div class="notebook-paper">
+                        <!-- Notebook Header Row -->
+                        <div class="notebook-header-row">
+                            <span class="notebook-subject"><i class="fa-solid fa-book-open"></i> Günlük.log</span>
+                            <div class="notebook-date-box">
+                                <span>NO:</span>
+                                <span style="color: var(--accent-primary);">02</span>
+                            </div>
+                        </div>
+
+                        <div class="blog-locked-container">
+                            <div class="blog-lock-overlay">
+                                <!-- İnteraktif Kilit Yapısı (Kaşe/Stamp Stili) -->
+                                <div class="lock-icon-container" onclick="toggleBlogLock(this)">
+                                    <div class="lock-icon-circle">
+                                        <i class="fa-solid fa-lock" id="blog-lock-icon"></i>
+                                    </div>
+                                </div>
+                                
+                                <span class="badge-coming-soon" style="background: rgba(220, 38, 38, 0.08); color: #dc2626; border: 1px dashed rgba(220, 38, 38, 0.4); padding: 0.4rem 1rem; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.82rem; letter-spacing: 1px;">YAKINDA</span>
+                                <h3 style="margin-top: 1.5rem; color: var(--text-primary); font-weight: 700;">Blog İçerikleri Hazırlık Aşamasında</h3>
+                                <p style="color: var(--text-secondary); max-width: 520px; line-height: 1.6; margin-top: 0.75rem;">Teknoloji, Yazılım Mühendisliği, Fırat Üniversitesi süreçleri ve FUTURE Topluluğu tecrübelerime dair yazılarımı çok yakında bu sayfada yayımlayacağım!</p>
+                                
+                                <div class="blog-return-btn-wrap" style="margin-top: 1.75rem;">
+                                    <a href="index.html" class="btn btn-secondary">
+                                        <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="blog-placeholder-grid" style="opacity: 0.12; pointer-events: none;">
+                                <div class="blog-skeleton-card">
+                                    <div class="sk-img"></div>
+                                    <div class="sk-line"></div>
+                                    <div class="sk-line short"></div>
+                                </div>
+                                <div class="blog-skeleton-card">
+                                    <div class="sk-img"></div>
+                                    <div class="sk-line"></div>
+                                    <div class="sk-line short"></div>
+                                </div>
+                                <div class="blog-skeleton-card">
+                                    <div class="sk-img"></div>
+                                    <div class="sk-line"></div>
+                                    <div class="sk-line short"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ Kısım: Karakter Animasyonu -->
+                <div class="character-card-wrapper">
+                    <div class="character-pic-container">
+                        <div class="character-pic-inner">
+                            <div class="character-frame-wrapper">
+                                <img src="assets/images/character/ch_1.png" alt="Karakter Kare 1" class="char-frame frame-1" draggable="false" oncontextmenu="return false;">
+                                <img src="assets/images/character/ch_2.png" alt="Karakter Kare 2" class="char-frame frame-2" draggable="false" oncontextmenu="return false;">
+                                <img src="assets/images/character/ch_3.png" alt="Karakter Kare 3" class="char-frame frame-3" draggable="false" oncontextmenu="return false;">
+                                <img src="assets/images/character/ch_4.png" alt="Karakter Kare 4" class="char-frame frame-4" draggable="false" oncontextmenu="return false;">
+                            </div>
+                            <!-- Görünmez Güvenlik Katmanı -->
+                            <div style="position: absolute; inset: 0; z-index: 5; background: transparent;" oncontextmenu="return false;"></div>
+                        </div>
+                        <div class="character-platform"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">İSHAK KARATAŞ</span>
+                <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="footer-center">
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/in/ishak-karata%C5%9F-7420802b3/" target="_blank" rel="noopener noreferrer" class="footer-social-btn linkedin" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/ishakkaratas05" target="_blank" rel="noopener noreferrer" class="footer-social-btn github" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kodkasifi_404/" target="_blank" rel="noopener noreferrer" class="footer-social-btn instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="index.html" class="back-to-top-btn" aria-label="Ana Sayfa">
+                    <i class="fa-solid fa-house"></i> Ana Sayfa
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-notification" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">E-posta adresi panoya kopyalandı!</span>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+    <script>
+        function toggleBlogLock(element) {
+            const icon = document.getElementById('blog-lock-icon');
+            if (!icon) return;
+
+            if (element.classList.contains('unlocked')) {
+                element.classList.remove('unlocked');
+                icon.className = 'fa-solid fa-lock';
+                showToast("Yazılar hazırlık aşamasında, kilitlendi 🔒");
+            } else {
+                element.classList.add('unlocked');
+                icon.className = 'fa-solid fa-lock-open';
+                createSparks(element);
+                showToast("Kilidi çok yakında birlikte açacağız! Takipte kalın ✨");
+            }
+        }
+
+        function createSparks(element) {
+            const colors = ['#4f46e5', '#8b5cf6', '#10b981', '#f59e0b', '#3b82f6'];
+            for (let i = 0; i < 12; i++) {
+                const spark = document.createElement('div');
+                spark.className = 'lock-spark';
+                spark.style.background = colors[Math.floor(Math.random() * colors.length)];
+                spark.style.left = '50%';
+                spark.style.top = '50%';
+                element.appendChild(spark);
+
+                const angle = Math.random() * Math.PI * 2;
+                const distance = 40 + Math.random() * 60;
+                const x = Math.cos(angle) * distance;
+                const y = Math.sin(angle) * distance;
+
+                setTimeout(() => {
+                    spark.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(0)`;
+                    spark.style.opacity = '1';
+                }, 10);
+
+                setTimeout(() => {
+                    spark.remove();
+                }, 600);
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            if (toast && toastMsg) {
+                toastMsg.textContent = msg;
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>
