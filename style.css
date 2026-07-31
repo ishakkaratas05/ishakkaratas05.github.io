@@ -91,6 +91,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -2656,3 +2657,74 @@ img, video {
     visibility: visible;
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   Responsive Overrides for Notebook, Character and Physics Elements
+   ========================================================================== */
+@media (max-width: 992px) {
+    .character-pic-container {
+        width: 340px !important;
+        height: 380px !important;
+    }
+    .character-pic-container::after {
+        bottom: 50px !important;
+        width: 280px !important;
+        height: 280px !important;
+    }
+    .character-pic-inner {
+        width: 310px !important;
+        height: 310px !important;
+    }
+    .character-platform {
+        width: 260px !important;
+        left: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Notebook Paper Mobile Optimization (Save space) */
+    .notebook-paper {
+        padding: 2rem 0.75rem 2rem 2.25rem !important;
+        background-image: 
+            linear-gradient(90deg, transparent 26px, rgba(239, 68, 68, 0.35) 26px, rgba(239, 68, 68, 0.35) 28px, transparent 28px),
+            repeating-linear-gradient(transparent, transparent 27px, var(--grid-line-color) 27px, var(--grid-line-color) 28px) !important;
+        background-size: 100% 100%, 100% 28px !important;
+    }
+    
+    .notebook-spirals {
+        left: 6px !important;
+        top: 2rem !important;
+        bottom: 2rem !important;
+        width: 14px !important;
+    }
+    
+    .spiral-ring {
+        width: 16px !important;
+        height: 7px !important;
+    }
+
+    /* Character Pic container scale for smallest mobile */
+    .character-pic-container {
+        width: 270px !important;
+        height: 310px !important;
+    }
+    .character-pic-container::after {
+        bottom: 40px !important;
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .character-pic-inner {
+        width: 240px !important;
+        height: 240px !important;
+    }
+    .character-platform {
+        width: 200px !important;
+        left: 8px !important;
+    }
+
+    /* Physics area container constraint */
+    .badge-physics-area {
+        max-width: 100% !important;
+    }
+}
+
